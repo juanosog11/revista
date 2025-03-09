@@ -1,115 +1,264 @@
-.hero-container {
-  position: relative;
-  height: 100vh;
-  width: 100%;
+/* AuthorsGallery.css */
+.gallery-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-video {
-  position: fixed;
-  top: 0;
-  left: 0;
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
 }
 
-.author-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-  width: 80%;
-  max-width: 900px;
+/* Título de la galería */
+.gallery-title {
   position: relative;
-  z-index: 1;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.gallery-title h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+}
+
+.gallery-title-span {
+  margin-left: 2rem;
+}
+
+.gallery-title-with {
+  position: absolute;
+  right: 6rem;
+  top: 0.5rem;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #a78bfa;
+}
+
+.gallery-title-reflection {
+  position: absolute;
+  bottom: 0;
+  right: 6rem;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  color: #23deeb;
+}
+
+/* Contenido de la galería */
+.gallery-content {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+}
+
+.gallery-slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.gallery-slide {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+
+.author-container {
+  position: relative;
+  cursor: pointer;
 }
 
 .author-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-  backdrop-filter: blur(5px);
+  background-color: #1f2937;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border-style: solid;
 }
 
-.author-card:hover {
-  transform: scale(1.05);
+.author-card.active {
+  border-color: #07d0e2 !important;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.author-image-container {
+  position: relative;
 }
 
 .author-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+  width: 100%;
   object-fit: cover;
-  margin-bottom: 10px;
 }
 
-.author-name {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.author-details-overlay {
-  position: fixed;
-  top: 0;
+.author-name-overlay {
+  position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  padding: 1rem;
+}
+
+.author-name-overlay h2 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
 }
 
 .author-details {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 500px;
-  text-align: center;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  color: white;
 }
 
-.author-detail-image {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
+.author-affiliation {
+  color: hwb(178 8% 10%);
+  margin-bottom: 0.5rem;
 }
 
-.author-details p {
-  margin-bottom: 12px;
-  font-size: 16px;
-  line-height: 1.5;
+.author-email {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
 }
 
-.author-details button {
-  background-color: #ff4b5c;
+.author-bio {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  max-height: 8rem;
+  overflow-y: auto;
+}
+
+.author-social {
+  color: #60a5fa;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.author-social:hover {
+  text-decoration: underline;
+}
+
+/* Reflejo */
+.author-reflection {
+  margin-top: 0.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.reflection-inner {
+  width: 100%;
+  background: linear-gradient(to bottom, #1f2937, #111827);
+  transform: scaleY(-1);
+  opacity: 0.6;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0));
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 30%, rgba(0,0,0,0));
+}
+
+/* Controles de navegación */
+.gallery-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 12px 24px;
-  font-size: 18px;
-  border-radius: 8px;
+  padding: 0.5rem;
   cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s ease-in-out;
+  z-index: 20;
 }
 
-.author-details button:hover {
-  background-color: #ff1e3c;
+.gallery-control.prev {
+  left: 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.gallery-control.next {
+  right: 0;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+/* Indicadores (puntos) */
+.gallery-dots {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 20;
+}
+
+.gallery-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #9ca3af;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gallery-dot.active {
+  background-color: #0ea8d3;
+}
+
+/* Íconos de tecnología */
+.tech-icons {
+  position: absolute;
+  right: 2rem;
+  top: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tech-icon {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.tech-html {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.tech-css {
+  color: #0066ff;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.tech-react {
+  color: #61dafb;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.tech-version {
+  font-size: 0.75rem;
+}
+
+/* Ícono de cámara */
+.camera-icon {
+  position: absolute;
+  left: 2rem;
+  top: 6rem;
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* Instrucciones */
+.gallery-instructions {
+  color: white;
+  font-size: 0.875rem;
+  margin-top: 2rem;
 }
