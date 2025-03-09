@@ -85,7 +85,7 @@ const HeroSection = () => {
   }, [activeIndex, showDetails]);
 
   return (
-    <div className='gallery-container'>
+    <div id='hero-section' className='gallery-container'>
       {/* Título */}
       <div className='gallery-title'>
         <h1>
