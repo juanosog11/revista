@@ -122,17 +122,17 @@ const HeroSection = () => {
 
             const cardStyle = {
               width: isActive ? '400px' : '350px',
-              height: isActive ? (showDetails ? '500px' : '300px') : '250px',
+              height: isActive ? (showDetails ? '600px' : '350px') : '300px',
               borderWidth: isActive ? '4px' : '2px',
               borderColor: isActive ? '#f9c646' : '#4a4a4a',
             };
 
             const imageStyle = {
-              height: isActive ? '200px' : '180px',
+              height: isActive ? '300px' : '300px',
             };
 
             const reflectionStyle = {
-              height: isActive ? '100px' : '80px',
+              height: isActive ? '100px' : '90px',
               width: isActive ? '400px' : '350px',
             };
 
@@ -193,25 +193,6 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
-
-      {/* Íconos de tecnología */}
-      <div className='tech-icons'>
-        <div className='tech-icon'>
-          <div className='tech-html'>HTML</div>
-          <div className='tech-version'>5</div>
-        </div>
-        <div className='tech-icon'>
-          <div className='tech-css'>CSS</div>
-          <div className='tech-version'>3</div>
-        </div>
-        <div className='tech-icon'>
-          <div className='tech-react'>React</div>
-        </div>
-      </div>
-
-      {/* Ícono de cámara */}
-      <div className='camera-icon'>📷</div>
-
       {/* Instrucciones */}
       <div className='gallery-instructions'>Haz clic en una tarjeta para ver detalles del autor</div>
     </div>
