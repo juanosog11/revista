@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import '../App.css';
 import { Link as ScrollLink } from 'react-scroll';
 import './CoverPage.css';
@@ -16,7 +16,7 @@ function CoverPage() {
           <h1 className='title'>Dilemas Éticos de la IA</h1>
           <p className='subtitle'>Explorando los desafíos eticos de la inteligencia artificial</p>
           <div className='cta-button' onClick={handleClick}>
-                      <ScrollLink to='magazine' smooth={true} duration={500}  onClick={closeMobileMenu}>
+                      <ScrollLink to='magazine1' smooth={true} duration={500}  onClick={closeMobileMenu}>
             Descubrir más
           </ScrollLink>
           </div>

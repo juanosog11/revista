@@ -25,7 +25,7 @@ function Navbar() {
             </ScrollLink>
           </li>
           <li className='nav-item'>
-            <ScrollLink to='magazine' smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
+            <ScrollLink to='magazine1' smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
               Revista
             </ScrollLink>
           </li>
