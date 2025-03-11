@@ -10,7 +10,7 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
-              src='images/Introdu.jpg'
+              src='images/cards/Introdu.jpg'
               text='Editorial y visión general sobre los dilemas éticos de la inteligencia artificial'
               label='Editorial'
               title='Introducción'
@@ -18,7 +18,7 @@ function Cards() {
               pageIndex={0}
             />
             <CardItem
-              src='images/img-2.jpg'
+              src='images/cards/img-1.jpg'
               text='Objetivos y propósito de nuestra investigación sobre ética en IA'
               label='Propósito'
               title='¿Qué queremos hacer?'
@@ -26,7 +26,7 @@ function Cards() {
               pageIndex={1}
             />
             <CardItem
-              src='images/img-2.jpg'
+              src='images/cards/importancia.jpg'
               text='La importancia de analizar las implicaciones éticas de la IA en nuestra sociedad'
               label='Motivación'
               title='¿Para qué lo hacemos?'
@@ -36,7 +36,7 @@ function Cards() {
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src='images/img-3.jpg'
+              src='images/cards/razones.jpg'
               text='Las razones fundamentales detrás de nuestro análisis ético de la IA'
               label='Justificación'
               title='¿Por qué se hace?'
@@ -44,7 +44,7 @@ function Cards() {
               pageIndex={3}
             />
             <CardItem
-              src='images/img-3.jpg'
+              src='images/cards/Metodologia.jpg'
               text='Metodología y enfoque para el estudio de los dilemas éticos'
               label='Metodología'
               title='¿Cómo se va a hacer?'
@@ -52,7 +52,7 @@ function Cards() {
               pageIndex={4}
             />
             <CardItem
-              src='images/img-4.jpg'
+              src='images/cards/fuentes.jpg'
               text='El marco académico y las fuentes que fundamentan nuestra investigación'
               label='Contexto'
               title='¿Dónde se va a hacer?'
@@ -60,7 +60,7 @@ function Cards() {
               pageIndex={5}
             />
             <CardItem
-              src='images/img-8.jpg'
+              src='images/cards/cronograma.jpg'
               text='Cronograma y plazos para el desarrollo de la revista sobre ética en IA'
               label='Cronograma'
               title='¿Cuándo lo vamos a hacer?'
