@@ -9,7 +9,7 @@ const HeroSection = () => {
   const authors = [
     {
       name: 'Luna Vélez Cano',
-      image: '/images/img-2.jpg',
+      image: '/images/Authors/Luna.jpg',
       affiliation: 'Institución Universitaria de Envigado',
       email: 'lvelezca@correo.iue.edu.co',
       bio: 'Soy estudiante de Ingeniería Informática con un fuerte interés en el desarrollo web, las bases de datos y la ciencia de datos. Me considero una persona responsable y disciplinada, en una búsqueda constante de crecimiento personal y profesional Disfruto aprendiendo y soy creativa, analítica y colaborativa. Me adapto fácilmente al cambio, lo que me permite abordar los desafíos desde perspectivas innovadoras y efectivas, contribuyendo de manera positiva en equipos de trabajo.',
@@ -17,21 +17,21 @@ const HeroSection = () => {
     },
     {
       name: 'Susana Molina Rodriguez',
-      image: '/images/img-3.jpg',
+      image: '/images/Authors/susa.jpg',
       affiliation: 'Institución Universitaria de Envigado',
       email: 'smolinar@correo.iue.edu.co',
       bio: 'Soy una persona creativa y con iniciativa, con gran energía para el desarrollo de actividades, me destaco por mi actitud proactiva, disposición para el trabajo en equipo y capacidad para resolver problemas. Me apasiona el campo de la seguridad de la información y ciberseguridad, por lo que he tomado la línea de énfasis en Seguridad de la Información, lo que me ha permitido fortalecer mis conocimientos en la protección de datos y sistemas.Cuento con conocimientos básicos en herramientas como Excel, Microsoft Power BI y Visual Studio, así como en diversos lenguajes de programación, incluyendo Python, C#, R, HTML, CSS y PHP. Además, tengo experiencia en bases de datos estructuradas y no estructuradas, así como en herramientas para pruebas automatizadas y análisis de calidad de código.Me encuentro en constante aprendizaje y busco ampliar mis conocimientos en ciberseguridad, inteligencia artificial y gestión de bases de datos para fortalecer mi perfil profesional y aportar soluciones innovadoras en el ámbito tecnológico.',
     },
     {
       name: 'Catalina Villa Quijano',
-      image: '/images/img-7.jpg',
+      image: '/images/Authors/Cata.jpg',
       affiliation: 'Institución Universitaria de Envigado',
       email: 'cvilla@correo.iue.edu.co',
       bio: 'Soy estudiante de Ingeniería Informática en la Institución Universitaria de Envigado, con énfasis en ciberseguridad y un fuerte interés en redes de datos. Tengo conocimientos en programación orientada a objetos y bases de datos SQL y NoSQL. Me destaco por mi pensamiento lógico, capacidad de análisis y resolución de problemas. Además, tengo nivel B2 en inglés y soy apasionada por la seguridad informática y la protección de la información.',
     },
     {
       name: 'Juan Pablo Osorio Giraldo',
-      image: '/images/img-4.jpg',
+      image: '/images/Authors/Pablo.jpg',
       affiliation: 'Institución Universitaria de Envigado',
       email: 'jposoriog@correo.iue.edu.co',
       bio: 'Soy un estudiante apasionado de Ingeniería Informática con un fuerte interés en la tecnología, tanto en software como en hardware. Mi enfoque autónomo de aprendizaje me ha permitido adquirir habilidades en la creación de software innovador y resolver problemas complejos mediante la programación.',
@@ -39,7 +39,7 @@ const HeroSection = () => {
     },
     {
       name: 'Cristian Danilo Tobón Marulanda',
-      image: '/images/img-5.jpg',
+      image: '/images/Authors/Cris.jpg',
       affiliation: 'Institución Universitaria de Envigado',
       email: 'cdtobon@correo.iue.edu.co',
       bio: 'Soy estudiante de octavo semestre de Ingeniería Informática en la Institución Universitaria de Envigado, con énfasis en Inteligencia Artificial, Big Data y Computación en la Nube. Me especializo en desarrollo de software, especialmente en el área de back-end como full stack.',
@@ -47,7 +47,7 @@ const HeroSection = () => {
     },
     {
       name: 'Gustavo Adolfo Velásquez Granado',
-      image: '/images/img-6.jpg',
+      image: '/images/Authors/Gusta.jpg',
       affiliation: 'Institución Universitaria de Envigado',
       email: 'gavelasquezg@correo.iue.edu.co',
       bio: 'Soy estudiante de octavo semestre de Ingeniería Informática, con especialización en seguridad informática. Tengo conocimientos en análisis de vulnerabilidades, pruebas de seguridad, aseguramiento de la calidad del software y administración de sistemas operativos.',
@@ -55,7 +55,7 @@ const HeroSection = () => {
     },
     {
       name: 'Santiago Agudelo Durango',
-      image: '/images/img-7.jpg',
+      image: '/images/Authors/Santiago.jpg',
       affiliation: 'Institución Universitaria de Envigado',
       email: 'sagudelod@correo.iue.edu.co',
       bio: 'Soy estudiante de séptimo semestre de ingeniería electrónica, de mi carrera me ha gustado todo lo que tenga que ver con redes, por ende, trabajo en una que tiene que ver con eso. También me interesa la robótica y la programación de sistemas autónomos.',
