@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Services.css';
 import { useLocation } from 'react-router-dom';
 
@@ -7,19 +7,23 @@ function Services() {
   const [currentPage, setCurrentPage] = useState(0);
 
   // Función para obtener el parámetro de la URL
-  const getQueryParam = (param) => {
+const getQueryParam = useCallback(
+  (param) => {
     const searchParams = new URLSearchParams(location.search);
     return searchParams.get(param);
-  };
+  },
+  [location.search]
+);
 
   // Establecer la página actual basada en el parámetro de URL
-  useEffect(() => {
-    const pageParam = getQueryParam('page');
-    if (pageParam !== null) {
-      const pageIndex = parseInt(pageParam);
-      setCurrentPage(pageIndex);
-    }
-  }, [location.search]);
+useEffect(() => {
+  const pageParam = getQueryParam('page');
+  if (pageParam !== null) {
+    const pageIndex = parseInt(pageParam, 10);
+    setCurrentPage(pageIndex);
+  }
+}, [getQueryParam]);
+
 
   const content = [
     {

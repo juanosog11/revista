@@ -1,13 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import React, { useState } from 'react';
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import './Navbar.css';
 
 function Navbar() {
   const [click, setClick] = useState(false);
+  const location = useLocation();
+  const history = useHistory();
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const handleNavigation = (section) => {
+    closeMobileMenu();
+
+    if (location.pathname === '/') {
+      // Ya estamos en Home → scroll directo
+      scroller.scrollTo(section, {
+        smooth: true,
+        duration: 500,
+        offset: -80,
+      });
+    } else {
+      // Estamos en otra página → ir a Home con hash
+      history.push(`/#${section}`);
+    }
+  };
 
   return (
     <nav className='navbar'>
@@ -15,24 +33,28 @@ function Navbar() {
         <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
           <i className='fas fa-robot'></i> AI Ethics
         </Link>
+
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
+
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <ScrollLink to='Home' smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
+            <button className='nav-links' onClick={() => handleNavigation('home')}>
               Home
-            </ScrollLink>
+            </button>
           </li>
+
           <li className='nav-item'>
-            <ScrollLink to='magazine1' smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
-              Revista
-            </ScrollLink>
+            <button className='nav-links' onClick={() => handleNavigation('dilemas')}>
+              Dilemas
+            </button>
           </li>
+
           <li className='nav-item'>
-            <ScrollLink to='hero-section' smooth={true} duration={500} className='nav-links' onClick={closeMobileMenu}>
+            <button className='nav-links' onClick={() => handleNavigation('autores')}>
               Autores
-            </ScrollLink>
+            </button>
           </li>
         </ul>
       </div>
